@@ -270,6 +270,15 @@ public interface Collection<E> extends Iterable<E> {
     boolean isEmpty();
 
     /**
+     * Returns {@code true} if this collection contains elements.
+     *
+     * @return {@code true} if this collection contains elements
+     */
+    default boolean isNotEmpty() {
+        return !isEmpty();
+    }
+
+    /**
      * Returns {@code true} if this collection contains the specified element.
      * More formally, returns {@code true} if and only if this collection
      * contains at least one element {@code e} such that
